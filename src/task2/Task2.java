@@ -5,12 +5,12 @@ public class Task2 {
 	{
 		int xAbs = Math.abs(x);
 		
-		if (y <= 0 && y >= -3 && xAbs <= 6)
+		if ((y <= 0) && (y >= -3) && (xAbs <= 6))
 		{
 			return true;
 		}
 		
-		if (y >= 0 && y <= 5 && xAbs <= 4)
+		if ((y >= 0) && (y <= 5) && (xAbs <= 4))
 		{
 			return true;
 		}
