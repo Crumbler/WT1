@@ -8,6 +8,9 @@ public class WebTech {
 		//task3.Task3.test();
 		//task4.Task4.test();
 		task5.Task5.test();
+		task6.Task6.test();
+		task7.Task7.test();
+		task8.Task8.test();
 	}
 
 }
