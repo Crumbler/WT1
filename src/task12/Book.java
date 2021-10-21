@@ -1,6 +1,6 @@
 package task12;
 
-public class Book implements Comparable {
+public class Book implements Comparable<Book> {
 	protected String title;
 	protected String author;
 	protected int price;
@@ -20,6 +20,21 @@ public class Book implements Comparable {
 		this.price = price;
 		this.edition = edition;
 		this.isbn = isbn;
+	}
+	
+	public String getTitle()
+	{
+		return this.title;
+	}
+	
+	public String getAuthor()
+	{
+		return this.author;
+	}
+	
+	public int getPrice()
+	{
+		return this.price;
 	}
 	
 	@Override
@@ -93,19 +108,18 @@ public class Book implements Comparable {
 						this.isbn);
 	}
 	
-	public int compareTo(Object o)
+	@Override
+	public int compareTo(Book b)
 	{
-		if (o == null)
+		if (b == null)
 		{
 			throw new NullPointerException();
 		}
 		
-		if (this.getClass() != o.getClass())
+		if (this.getClass() != b.getClass())
 		{
 			throw new ClassCastException();
 		}
-		
-		Book b = (Book)o;
 		
 		if (this.isbn < b.isbn)
 		{
